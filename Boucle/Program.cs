@@ -11,19 +11,28 @@ namespace Boucle
     {
         static void Main(string[] args)
         {
-            double TVA = 0.20;
-            double TVAbis;
-            double prix;
+            int i;
+            double note;
+            double moyenne;
+            double total= 0;
 
-            Console.WriteLine("Saisir un prix HT ");
-            double ht = Convert.ToDouble(Console.ReadLine());   
-            Console.WriteLine("Le prix Hors taxe est de : {0} euros",ht);
-            TVAbis=ht*TVA;
-            Console.WriteLine("La Tva est de : {0} euros",TVAbis);
-            prix = ht + TVAbis;
-            Console.WriteLine("Le prix TTC est de {0}", prix);
-            while (ht != 0);
-            System.Console.WriteLine(ht);
+            Console.WriteLine("Saisir le nombre d'élèves");
+            int nbEleve=Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Il y a {0} élèves ",nbEleve);
+           
+            
+            for (i = 0; i < nbEleve; i++)
+            {
+                Console.WriteLine("Saisir une note par élèves");
+                note = Convert.ToDouble(Console.ReadLine());
+                total = total + note;
+
+            }
+            moyenne = total / nbEleve;
+            Console.WriteLine("La moyenne de  l'élève est égale à {0}", moyenne);
+
+            Console.ReadKey();  
+           
         
 
 
